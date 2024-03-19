@@ -1,5 +1,5 @@
 import React,{FC,useState} from "react";
-import {useTitle} from 'ahooks';
+
 import { Typography,Empty, Table,Tag,Button,Space,Modal,Spin } from "antd";
 import styles from './common.module.scss';
 import { ExclamationCircleOutlined } from "@ant-design/icons";
@@ -9,7 +9,7 @@ import ListPage from "../../components/ListPage";
 const {Title} = Typography;
 const {confirm} = Modal;
 const Trash:FC =() =>{
-    useTitle('小慕问卷-回收站');
+    
     const [selectedIds,setSelectedIds] = useState<string[]>([]);
     const tableColumns =[
         {
@@ -25,7 +25,7 @@ const Trash:FC =() =>{
             }
         },
         {
-            title:'答卷数量',
+            title:'被阅读数',
             dataIndex:'answerCount',
         },
         {

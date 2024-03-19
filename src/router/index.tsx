@@ -12,6 +12,7 @@ import Star from '../pages/manage/Star';
 import Trash from '../pages/manage/Trash';
 import Edit from '../pages/question/Edit';
 import Stat from '../pages/question/Stat';
+import { AuthRoute } from './AuthRoute';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -19,7 +20,9 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />,
+        element:( 
+            <Home />
+        ),
       },
       {
         path: 'login',
@@ -31,19 +34,35 @@ const router = createBrowserRouter([
       },
       {
         path: 'manage',
-        element: <ManageLayout />,
+        element:( 
+          <AuthRoute>
+            <ManageLayout />
+          </AuthRoute>
+        ),
         children: [
           {
             path: 'list',
-            element: <List />,
+            element:( 
+          <AuthRoute>
+            <List />
+          </AuthRoute>
+        ),
           },
           {
             path: 'star',
-            element: <Star />,
+             element:( 
+          <AuthRoute>
+            <Star />
+          </AuthRoute>
+        ),
           },
           {
             path: 'trash',
-            element: <Trash />,
+            element:( 
+          <AuthRoute>
+            <Trash />
+          </AuthRoute>
+            )
           },
         ],
       },
@@ -62,7 +81,7 @@ const router = createBrowserRouter([
         element: <Edit />,
       },
       {
-        path: 'stat/:id', // statistic 统计
+        path: 'stat/:id', 
         element: <Stat />,
       },
     ],

@@ -15,8 +15,8 @@ const Home:FC =() =>{
     }
     return <div className={styles.container}>
         <div className={styles.info}>
-            <Title>问卷调查 | 在线投票</Title>
-            <Paragraph>已累计创建问卷100份,发布问卷90份,收到答卷980份</Paragraph>
+            <Title level={2}>基于Ant desgin组件库打造的一款个人博客管理系统</Title>
+            <Paragraph></Paragraph>
             <div className={styles.button}>
                 <Button type="primary" onClick={clickHandler} size="large" style={{height:'54px',lineHeight:'54px',width:'95px'}}>开始使用</Button>
             </div>

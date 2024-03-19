@@ -26,16 +26,16 @@ const ManageLayout:FC =() =>{
             type="primary" 
             icon={<PlusOutlined/>}
             onClick={handleCreateClick}
-            disabled={loading} >创建问卷</Button>
+            disabled={loading} >新增文章</Button>
             <Button block 
             type={pathname.startsWith('/manage/List')?'default':'text'} 
             icon={<BarsOutlined/>} 
-            onClick={()=>nav('/manage/List')}>我的问卷</Button>
+            onClick={()=>nav('/manage/List')}>最新文章</Button>
 
             <Button block 
             type={pathname.startsWith('/manage/Star')?'default':'text'} 
             icon={<StarOutlined/>} 
-            onClick={()=>nav('/manage/Star')}>星标问卷</Button>
+            onClick={()=>nav('/manage/Star')}>收藏文章</Button>
 
             <Button block 
             type={pathname.startsWith('/manage/Trash')?'default':'text'} 

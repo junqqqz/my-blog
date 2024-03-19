@@ -24,5 +24,6 @@ export async function loginService(username: string, password: string): Promise<
   const url = '/api/user/login'
   const body = { username, password }
   const data = (await axios.post(url, body)) as ResDataType
+  console.log(data);
   return data
 }

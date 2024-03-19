@@ -1,9 +1,10 @@
 import React,{FC} from "react";
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
+import MainLayout from "./MainLayout";
 const QuestionLayout:FC =() =>{
     return <>
-    <div>QuestionLayout</div>
-        <Outlet/>
+        <MainLayout></MainLayout>
+        
     </>
 }
 

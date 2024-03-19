@@ -3,23 +3,22 @@
     padding:12px;
     border-radius:3px;
     background-color: #fff;
-
+    
     &:hover {
         box-shadow: 0 4px 10px #e8e8e8;
     }
 }
 .title {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 32px;
     line-height: 32px;
     border-bottom: 1px solid #e3e5e7;
     font-size: 16px;
-    .left {
-        flex:1;
-    }
     .right {
         font-size: 16px;
-        // text-align: right;
+        text-align: center;
         width: 296px;
     }
 }

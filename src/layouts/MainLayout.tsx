@@ -14,7 +14,7 @@ const MainLayout:React.FC =() =>{
     <Content className={styles.main}>
         <Outlet/>
     </Content>
-    <Footer className={styles.footer}>小慕问卷 &copy;2024-present. Created by junqqqz</Footer>
+    <Footer className={styles.footer}>My-blog &copy;2024-present. Created by junqqqz</Footer>
     </Layout>
 }
 

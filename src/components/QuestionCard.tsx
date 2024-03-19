@@ -45,7 +45,7 @@ const QuestionCard:FC<PropsType> = (props:PropsType) =>{
     const nav = useNavigate();
     const del = () =>{
         confirm({
-            title:'确定删除该问卷？',
+            title:'确定删除该文章？',
             icon:<ExclamationCircleFilled/>,
             onOk:()=> message.success('删除成功')
         })
@@ -63,7 +63,7 @@ const QuestionCard:FC<PropsType> = (props:PropsType) =>{
         <div className={styles.right}>
           <Space>
             {isPublished?<Tag color="processing">已发布</Tag> :<Tag>未发布</Tag>}
-            <span>答卷：{answerCount}</span>
+            <span>阅读数：{answerCount}</span>
             <span>{createAt}</span>
           </Space>
         </div>
@@ -73,10 +73,10 @@ const QuestionCard:FC<PropsType> = (props:PropsType) =>{
             <Space>
                 <Button icon={<EditOutlined/>} type='text' size='small'
                    onClick={()=>nav(`/question/edit/${_id}`)}>
-                    编辑问卷</Button>
+                    编辑文章</Button>
                 <Button icon={<LineChartOutlined/> } type='text' size='small'
                    onClick={()=>nav(`/question/stat/${_id}`)} disabled={!isPublished}>
-                    问卷统计</Button>
+                    文章统计</Button>
             </Space>
         </div>
         <div className={styles.right}>
